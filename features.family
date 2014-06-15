@@ -1,0 +1,414 @@
+#--------------------------------------
+@CONSONANTS_ALL = [guKa guKha guGa guGha guNga guCa guCha guJa guJha guNya guTta guTtha guDda guDdha guNna guTa guTha guDa guDha guNa guPa guPha guBa guBha guMa guYa guRa guLa guLla guVa guSha guSa guHa guKhha guGhha guZa guRra guFa];
+@CONSONANTS_MOST = [guSa guHa guKa guKha guNga guCa guCha guJa guJha guNya guTta guTtha guDda guDdha guNna guTa guTha guDa guDha guNa guPa guPha guBa guBha guMa guRa guLa guVa guRra];
+@CONSONANTS_SOME = [guHa guNga guTta guDda guNna guTa guDha guPa guPha guBha guVa guRa guRra];
+@CONSONANTS_FEW = [guHa guNga guTta guDda guTa guBha guRa guRra];
+@CONSONANTS_C2_BELOW = [guVa.c2 guHa.c2];
+@MATRAS_ABOVE = [guEesign guAisign guOosign guAusign];
+@URA = [guU guUu guOo guUra];
+@I_FORMS = [guI guIsign guIsign.a];
+@ADDAK = [guAddak guAdakBindi];
+@MODIFIERS = [guBindi guTippi guAdakBindi guAddak];
+
+@LETTERS_MAJUSCULE_LATIN = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AE Lslash Oslash OE Eth Thorn];
+
+@FIGURES_LINING_TABULAR = [zero one two three four five six seven eight nine guZero guOne guTwo guThree guFour guFive guSix guSeven guEight guNine rupeeindian];
+@FIGURES_LINING_PROPORTIONAL = [zero.pnum one.pnum two.pnum three.pnum four.pnum five.pnum six.pnum seven.pnum eight.pnum nine.pnum guZero.pnum guOne.pnum guTwo.pnum guThree.pnum guFour.pnum guFive.pnum guSix.pnum guSeven.pnum guEight.pnum guNine.pnum rupeeindian.pnum];
+
+@SORTS_DFLT = [exclam question quoteleft quoteright quotedblleft quotedblright asterisk];
+@SORTS_LATN = [exclam.latn question.latn quoteleft.latn quoteright.latn quotedblleft.latn quotedblright.latn asterisk.latn];
+
+@MARKS_CMB_LAT = [ gravecmb acutecmb circumflexcmb tildecmb dieresiscmb macroncmb brevecmb ringcmb dotaccentcmb caroncmb candrabinducmb];
+@MARKS_CMB_LAT_CASE = [ grave.cap acute.cap circumflex.cap tilde.cap dieresis.cap macron.cap breve.cap ring.cap dotaccent.cap caron.cap candrabindu.cap];
+
+#--------------------------------------
+languagesystem DFLT dflt;
+languagesystem gur2 dflt;
+languagesystem guru dflt;
+languagesystem latn dflt;
+
+#--------------------------------------
+lookup HEADLINE_1 {
+	lookupflag 0;
+	sub guI by headline guI;
+	sub guSa by headline guSa;
+	sub guHa by headline guHa;
+	sub guKa by headline guKa;
+	sub guKha by headline guKha;
+	sub guGa by headline guGa;
+	sub guGha by headline guGha;
+	sub guNga by headline guNga;
+	sub guCa by headline guCa;
+	sub guCha by headline guCha;
+	sub guJa by headline guJa;
+	sub guJha by headline guJha;
+	sub guNya by headline guNya;
+	sub guTta by headline guTta;
+	sub guTtha by headline guTtha;
+	sub guDda by headline guDda;
+	sub guDdha by headline guDdha;
+	sub guNna by headline guNna;
+	sub guTa by headline guTa;
+	sub guTha by headline guTha;
+	sub guDa by headline guDa;
+	sub guDha by headline guDha;
+	sub guNa by headline guNa;
+	sub guPa by headline guPa;
+	sub guPha by headline guPha;
+	sub guBa by headline guBa;
+	sub guBha by headline guBha;
+	sub guMa by headline guMa;
+	sub guYa by headline guYa;
+	sub guRa by headline guRa;
+	sub guLa by headline guLa;
+	sub guVa by headline guVa;
+	sub guRra by headline guRra;
+	sub guSha by headline guSha;
+	sub guKhha by headline guKhha;
+	sub guGhha by headline guGhha;
+	sub guZa by headline guZa;
+	sub guFa by headline guFa;
+	sub guLla by headline guLla;
+	sub guIsign by headline guIsign;
+} HEADLINE_1;
+
+lookup HEADLINE_2 {
+	lookupflag 0;
+	sub guI by headline1 guI;
+	sub guSa by headline1 guSa;
+	sub guHa by headline1 guHa;
+	sub guKa by headline1 guKa;
+	sub guKha by headline1 guKha;
+	sub guGa by headline1 guGa;
+	sub guGha by headline1 guGha;
+	sub guNga by headline1 guNga;
+	sub guCa by headline1 guCa;
+	sub guCha by headline1 guCha;
+	sub guJa by headline1 guJa;
+	sub guJha by headline1 guJha;
+	sub guNya by headline1 guNya;
+	sub guTta by headline1 guTta;
+	sub guTtha by headline1 guTtha;
+	sub guDda by headline1 guDda;
+	sub guDdha by headline1 guDdha;
+	sub guNna by headline1 guNna;
+	sub guTa by headline1 guTa;
+	sub guTha by headline1 guTha;
+	sub guDa by headline1 guDa;
+	sub guDha by headline1 guDha;
+	sub guNa by headline1 guNa;
+	sub guPa by headline1 guPa;
+	sub guPha by headline1 guPha;
+	sub guBa by headline1 guBa;
+	sub guBha by headline1 guBha;
+	sub guMa by headline1 guMa;
+	sub guYa by headline1 guYa;
+	sub guRa by headline1 guRa;
+	sub guLa by headline1 guLa;
+	sub guVa by headline1 guVa;
+	sub guRra by headline1 guRra;
+	sub guSha by headline1 guSha;
+	sub guKhha by headline1 guKhha;
+	sub guGhha by headline1 guGhha;
+	sub guZa by headline1 guZa;
+	sub guFa by headline1 guFa;
+	sub guLla by headline1 guLla;
+	sub guIsign by headline1 guIsign;
+} HEADLINE_2;
+
+lookup HEADLINE_3 {
+	lookupflag 0;
+	sub guI by headline headline headline guI;
+	sub guSa by headline headline headline guSa;
+	sub guHa by headline headline headline guHa;
+	sub guKa by headline headline headline guKa;
+	sub guKha by headline headline headline guKha;
+	sub guGa by headline headline headline guGa;
+	sub guGha by headline headline headline guGha;
+	sub guNga by headline headline headline guNga;
+	sub guCa by headline headline headline guCa;
+	sub guCha by headline headline headline guCha;
+	sub guJa by headline headline headline guJa;
+	sub guJha by headline headline headline guJha;
+	sub guNya by headline headline headline guNya;
+	sub guTta by headline headline headline guTta;
+	sub guTtha by headline headline headline guTtha;
+	sub guDda by headline headline headline guDda;
+	sub guDdha by headline headline headline guDdha;
+	sub guNna by headline headline headline guNna;
+	sub guTa by headline headline headline guTa;
+	sub guTha by headline headline headline guTha;
+	sub guDa by headline headline headline guDa;
+	sub guDha by headline headline headline guDha;
+	sub guNa by headline headline headline guNa;
+	sub guPa by headline headline headline guPa;
+	sub guPha by headline headline headline guPha;
+	sub guBa by headline headline headline guBa;
+	sub guBha by headline headline headline guBha;
+	sub guMa by headline headline headline guMa;
+	sub guYa by headline headline headline guYa;
+	sub guRa by headline headline headline guRa;
+	sub guLa by headline headline headline guLa;
+	sub guVa by headline headline headline guVa;
+	sub guRra by headline headline headline guRra;
+	sub guSha by headline headline headline guSha;
+	sub guKhha by headline headline headline guKhha;
+	sub guGhha by headline headline headline guGhha;
+	sub guZa by headline headline headline guZa;
+	sub guFa by headline headline headline guFa;
+	sub guLla by headline headline headline guLla;
+	sub guIsign by headline headline headline guIsign;
+} HEADLINE_3;
+
+lookup HEADLINE_4 {
+	lookupflag 0;
+	sub guI by headline2 guI;
+	sub guSa by headline2 guSa;
+	sub guHa by headline2 guHa;
+	sub guKa by headline2 guKa;
+	sub guKha by headline2 guKha;
+	sub guGa by headline2 guGa;
+	sub guGha by headline2 guGha;
+	sub guNga by headline2 guNga;
+	sub guCa by headline2 guCa;
+	sub guCha by headline2 guCha;
+	sub guJa by headline2 guJa;
+	sub guJha by headline2 guJha;
+	sub guNya by headline2 guNya;
+	sub guTta by headline2 guTta;
+	sub guTtha by headline2 guTtha;
+	sub guDda by headline2 guDda;
+	sub guDdha by headline2 guDdha;
+	sub guNna by headline2 guNna;
+	sub guTa by headline2 guTa;
+	sub guTha by headline2 guTha;
+	sub guDa by headline2 guDa;
+	sub guDha by headline2 guDha;
+	sub guNa by headline2 guNa;
+	sub guPa by headline2 guPa;
+	sub guPha by headline2 guPha;
+	sub guBa by headline2 guBa;
+	sub guBha by headline2 guBha;
+	sub guMa by headline2 guMa;
+	sub guYa by headline2 guYa;
+	sub guRa by headline2 guRa;
+	sub guLa by headline2 guLa;
+	sub guVa by headline2 guVa;
+	sub guRra by headline2 guRra;
+	sub guSha by headline2 guSha;
+	sub guKhha by headline2 guKhha;
+	sub guGhha by headline2 guGhha;
+	sub guZa by headline2 guZa;
+	sub guFa by headline2 guFa;
+	sub guLla by headline2 guLla;
+	sub guIsign by headline2 guIsign;
+} HEADLINE_4;
+
+feature ccmp {
+
+lookup HEADLINE_1_CXT { #rules with _FEW first, then _SOME, then _MOST
+	lookupflag 0;
+	sub [guIi guIisign] guTippi @CONSONANTS_FEW' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guIi guIisign guU guUu] [guBindi guTippi] @CONSONANTS_FEW' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guIi guIisign guU guUu] [guBindi guTippi] @CONSONANTS_SOME' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guIi guIisign guU guUu] [guAddak guAdakBindi] @CONSONANTS_FEW' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guIi guIisign guU guUu] [guAddak guAdakBindi] @CONSONANTS_MOST' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guIi guIisign guU guUu] [guBindi guTippi guAddak guAdakBindi] [guI guIsign]' lookup HEADLINE_1;
+
+	sub [guEe guEesign guOosign] [guTippi guAddak guAdakBindi] @CONSONANTS_FEW' lookup HEADLINE_3 @MATRAS_ABOVE;
+	sub [guEe guEesign guOosign] [guTippi guAddak guAdakBindi] @CONSONANTS_SOME' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guEe guEesign guOosign] [guTippi guAddak guAdakBindi] @CONSONANTS_MOST' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guEe guEesign guOosign] guTippi [guI guIsign]' lookup HEADLINE_2;
+	sub [guEe guEesign guOo guOosign] [guAddak guAdakBindi] [guI guIsign]' lookup HEADLINE_2;
+
+	sub [guAi guAisign] guBindi @CONSONANTS_FEW' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guAi guAisign] guTippi @CONSONANTS_FEW' lookup HEADLINE_3 @MATRAS_ABOVE;
+	sub [guAi guAisign] guTippi @CONSONANTS_SOME' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guAi guAisign] guTippi @CONSONANTS_MOST' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guAi guAisign] [guAddak guAdakBindi] @CONSONANTS_FEW' lookup HEADLINE_4 @MATRAS_ABOVE;
+	sub [guAi guAisign] [guAddak guAdakBindi] @CONSONANTS_SOME' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guAi guAisign] [guAddak guAdakBindi] @CONSONANTS_MOST' lookup HEADLINE_1 @MATRAS_ABOVE;
+	sub [guAi guAisign] guBindi [guI guIsign]' lookup HEADLINE_1;
+	sub [guAi guAisign] [guTippi guAddak guAdakBindi] [guI guIsign]' lookup HEADLINE_2;
+
+	sub guOo [guAddak guAdakBindi] @CONSONANTS_FEW' lookup HEADLINE_3 @MATRAS_ABOVE;
+	sub guOo [guAddak guAdakBindi] @CONSONANTS_MOST' lookup HEADLINE_1 @MATRAS_ABOVE;
+
+	sub [guAu guAusign] guBindi @CONSONANTS_FEW' lookup HEADLINE_4 @MATRAS_ABOVE;
+	sub [guAu guAusign] guBindi @CONSONANTS_MOST' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guAu guAusign] guTippi @CONSONANTS_FEW' lookup HEADLINE_4 @MATRAS_ABOVE;
+	sub [guAu guAusign] guTippi @CONSONANTS_SOME' lookup HEADLINE_3 @MATRAS_ABOVE;
+	sub [guAu guAusign] guTippi @CONSONANTS_MOST' lookup HEADLINE_2 @MATRAS_ABOVE;
+	sub [guAu guAusign] [guAddak guAdakBindi] @CONSONANTS_MOST' lookup HEADLINE_4 @MATRAS_ABOVE;
+	sub [guAu guAusign] guBindi [guI guIsign]' lookup HEADLINE_3;
+	sub [guAu guAusign] [guTippi guAddak guAdakBindi] [guI guIsign]' lookup HEADLINE_4;
+
+	sub [guAu guAusign guTippi guAddak guAdakBindi] @CONSONANTS_FEW' lookup HEADLINE_1 @MATRAS_ABOVE;
+} HEADLINE_1_CXT;
+
+lookup COMPOSE {
+	sub G macronbelowcmb H macronbelowcmb by GHmacronbelow;
+	sub G macrondoublebelowcmb H by GHmacronbelow;
+	sub G macronbelowcmb h macronbelowcmb by Ghmacronbelow;
+	sub G macronbelowcmb hlinebelow by Ghmacronbelow;
+	sub G macrondoublebelowcmb h by Ghmacronbelow;
+	sub g macronbelowcmb h macronbelowcmb by ghmacronbelow;
+	sub g macronbelowcmb hlinebelow by ghmacronbelow;
+	sub g macrondoublebelowcmb h by ghmacronbelow;
+	sub K macronbelowcmb H macronbelowcmb by KHmacronbelow;
+	sub Klinebelow H macronbelowcmb by KHmacronbelow;
+	sub K macrondoublebelowcmb H by KHmacronbelow;
+	sub K macronbelowcmb h macronbelowcmb by Khmacronbelow;
+	sub Klinebelow hlinebelow by Khmacronbelow;
+	sub K macrondoublebelowcmb h by Khmacronbelow;
+	sub k macronbelowcmb h macronbelowcmb by khmacronbelow;
+	sub klinebelow hlinebelow by khmacronbelow;
+	sub k macrondoublebelowcmb h by khmacronbelow;
+} COMPOSE; 
+
+lookup MAJUCSULE_ACCENTS_CMB_CONTEXT { # substitutes combining marks for miniscules with forms for majuscules
+	sub @LETTERS_MAJUSCULE_LATIN @MARKS_CMB_LAT' by @MARKS_CMB_LAT_CASE;
+} MAJUCSULE_ACCENTS_CMB_CONTEXT;
+
+} ccmp;
+
+#--------------------------------------
+feature locl { # Localized Forms
+	script latn;
+	language dflt;
+		sub @SORTS_DFLT by @SORTS_LATN;
+} locl;
+
+
+#--------------------------------------
+feature nukt { # Nukta Forms
+	sub guLa guNukta by guLla;
+	sub guSa guNukta by guSha;
+	sub guKha guNukta by guKhha;
+	sub guGa guNukta by guGhha;
+	sub guJa guNukta by guZa;
+	sub guPha guNukta by guFa;
+} nukt;
+
+
+#--------------------------------------
+#feature akhn { # Akhands
+#} akhn;
+
+
+#--------------------------------------
+feature blwf { # Below-Base Forms
+
+lookup blwf_gur2 {
+	script gur2;
+	language dflt;
+	sub guVirama guRa by guRa.c2;
+	sub guVirama guVa by guVa.c2;
+	sub guVirama guHa by guHa.c2;
+} blwf_gur2;
+
+lookup blwf_guru {
+	script guru;
+	language dflt;
+	sub guRa guVirama by guRa.c2;
+	sub guVa guVirama by guVa.c2;
+	sub guHa guVirama by guHa.c2;
+} blwf_guru;
+
+} blwf;
+
+
+#--------------------------------------
+feature pstf { # Post-Base Forms
+
+lookup pstf_gur2 {
+	script gur2;
+	language dflt;
+	sub guVirama guYa by guYa.c2;
+} pstf_gur2;
+
+lookup pstf_guru {
+	script guru;
+	language dflt;
+	sub guYa guVirama by guYa.c2;
+} pstf_guru;
+
+} pstf;
+
+
+#--------------------------------------
+feature pres { # Pre-base Substitutions
+# NOTE: This substitution must be written to match 
+# the glyph sequence after the reordering of the 
+# underlying characters has occurred.
+
+	sub guIsign' @CONSONANTS_FEW @ADDAK by guIsign.a;
+	sub guIsign' [guTtha guNa] guTippi by guIsign.a;
+
+} pres;
+
+
+#--------------------------------------
+feature abvs { # Above-Base Substitutions
+	sub guOo guBindi by guOoBindi;
+#	sub @URA guBindi' @CONSONANTS_FEW @MATRAS_ABOVE by guBindi.a;
+#	sub @URA guTippi' @CONSONANTS_SOME @MATRAS_ABOVE by guTippi.a;
+#	sub @URA [guAddak guAdakBindi]' @CONSONANTS_MOST @MATRAS_ABOVE by [guAddak.a guAdakBindi.a];
+} abvs;
+
+
+#--------------------------------------
+#feature blws { # Below-Base Substitutions
+#} blws;
+
+
+#--------------------------------------
+#feature psts { # Post-base Substitutions
+
+#} psts;
+
+
+#--------------------------------------
+ feature calt {
+ 	lookup HEADLINE_1_CXT;
+} calt;
+
+#--------------------------------------
+feature pnum { # Proportional Figures
+	sub @FIGURES_LINING_TABULAR by @FIGURES_LINING_PROPORTIONAL;
+} pnum;
+
+#--------------------------------------
+feature liga {
+	sub f f b by f_f_b;
+	sub f f h by f_f_h;
+	sub f f i by f_f_i;
+	sub f f j by f_f_j;
+	sub f f k by f_f_k;
+	sub f f l by f_f_l;
+	sub f f t by f_f_t;
+	sub T h by T_h;
+	sub f b by f_b;
+	sub f f by f_f;
+	sub f h by f_h;
+	sub f i by f_i;
+	sub f j by f_j;
+	sub f k by f_k;
+	sub f l by f_l;
+	sub f t by f_t;
+} liga;
+
+feature ss01 {
+	sub guOne by guOne.a;
+	sub guOne.pnum by guOne.pnma;
+} ss01;
+
+feature ss02 {
+	sub guEkOnkar by guOne.a guOo arc;
+} ss02;
+
+#--------------------------------------
+feature size {
+	parameters 11.0 0; # design size, subfamily
+} size;
+
